@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Karla", sans-serif;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(204, 43%, 93%);
+    display: grid;
+    grid-template-columns: 23% 46% 23%;
+    grid-template-rows: 20% 60% 20%;
+}
+
+article {
+    display: grid;
+    background-color: white;
+    border-radius: 10px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 20% 20% 20% 15%;
+}
+
+header {
+    grid-column: 1/3;
+    grid-row: 1/3;
+    padding: 5%;
+}
+
+header h1 {
+    color: hsl(179, 62%, 43%);
+    margin-bottom: 1.1rem;
+}
+
+header h3 {
+    color: hsl(71, 73%, 54%);
+    margin-bottom: 0.7rem;
+}
+
+header p {
+    color: hsl(218, 22%, 67%);
+    margin-bottom: 0.4rem;
+}
+
+section {
+    grid-column: 1/2;
+    grid-row: 3/6;
+    background-color: hsl(179, 62%, 43%);
+    border-bottom-left-radius: 10px;
+    padding: 10%;
+    color: white;
+}
+
+section h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1.1rem;
+}
+
+.container-price {
+    display: table;
+}
+
+.price {
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+.price-desc {
+    color: hsl(218, 22%, 85%);
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 0.7rem;
+    font-size: 0.8rem;
+}
+
+section p {
+    margin-top: 0.7rem;
+    font-size: 0.9rem;
+}
+
+section button {
+    color: white;
+    background-color: hsl(71, 73%, 54%);
+    border: none;
+    width: 100%;
+    padding: 5% 0;
+    border-radius: 5px;
+    margin-top: 1.2rem;
+    font-weight: 700;
+}
+
+section button:hover {
+    cursor: pointer;
+    background: linear-gradient(to right, hsl(71, 73%, 54%), lightgreen);
+}
+
+footer {
+    grid-column: 2/3;
+    grid-row: 3/6;
+    background-color: hsl(179, 62%, 48%);
+    border-bottom-right-radius: 10px;
+    color: white;
+    padding: 10%;
+}
+
+footer h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1.1rem;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: hsl(218, 22%, 95%);
+    margin-bottom: 0.1rem;
+}
+
+@media screen and (max-width:1270px) {
+    * {
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .wrapper {
+
+        grid-template-columns: 20% 60% 20%;
+    }
+}
+
+@media screen and (max-width:575px) {
+    * {
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .wrapper {
+
+        grid-template-columns: 10% 80% 10%;
+    }
+}
+
+@media screen and (max-width:415px) {
+
+    .wrapper {
+        grid-template-columns: 5% 90% 5%;
+        grid-template-rows: 5% 90% 5%;
+    }
+
+    article {
+        grid-template-columns: 100%;
+        grid-template-rows: 33.3% 33.3% 33.3%;
+    }
+
+    header {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    section {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        padding: 5%;
+        border-bottom-left-radius: 0px;
+    }
+
+    footer {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        padding: 5%;
+        border-bottom-left-radius: 10px;
+    }
+}
